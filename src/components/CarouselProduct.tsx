@@ -13,8 +13,8 @@ import CardMenu from "./CardMenu";
 const CarouselProduct = ({ data }: { data: Data[] | undefined }) => {
   return (
     <div>
-      <Carousel className="w-full max-w-xs lg:max-w-3xl xl:max-w-6xl">
-        <CarouselContent className="min-h-[300px]">
+      <Carousel className="w-[270px] md:w-full max-w-xs lg:max-w-3xl xl:max-w-6xl">
+        <CarouselContent className="min-h-[350px]">
           {data?.map((menu) => (
             <CarouselItem
               key={menu.no}

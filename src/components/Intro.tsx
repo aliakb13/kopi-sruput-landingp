@@ -55,7 +55,13 @@ const Intro = () => {
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.5, ease: "easeIn" }}
+          transition={{
+            duration: 1.5,
+            delay: 0.5,
+            ease: "easeIn",
+            type: "spring",
+            stiffness: 200,
+          }}
           viewport={{ once: true, amount: 0.3 }}
           className="flex-1 max-w-2xl"
         >

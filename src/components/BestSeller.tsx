@@ -1,5 +1,6 @@
 import { useData } from "@/App";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { motion } from "motion/react";
 
 // import {
 //   Card,
@@ -21,7 +22,13 @@ const BestSeller = () => {
   return (
     <section className="bg-black py-16 px-6 md:px-12 lg:px-24 flex flex-col items-center">
       {/* Heading */}
-      <div className="text-center mb-10 max-w-3xl">
+      <motion.div
+        initial={{ scale: 0.8, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.2, delay: 0.5, ease: "easeIn" }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-center mb-10 max-w-3xl"
+      >
         <h2 className="text-2xl sm:text-3xl md:text-lg font-bold text-white tracking-widest">
           PRODUCTS
         </h2>
@@ -32,10 +39,16 @@ const BestSeller = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
           iure velit dolore mollitia, corporis quaerat.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="flex justify-center">
-        <Tabs defaultValue="coffe" className="w-[600px]">
+      <motion.div
+        initial={{ scale: 0.7, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.4, ease: "easeIn" }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="w-[350px] md:w-full flex justify-center"
+      >
+        <Tabs defaultValue="coffe" className="w-full md:w-[600px]">
           <TabsList className="grid w-full grid-cols-3 gap-3">
             <TabsTrigger
               value="coffe"
@@ -66,60 +79,7 @@ const BestSeller = () => {
             <CarouselProduct data={chickenData} />
           </TabsContent>
         </Tabs>
-        {/* <Tabs defaultValue="account" className="w-[400px]">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="account">Account</TabsTrigger>
-            <TabsTrigger value="password">Password</TabsTrigger>
-          </TabsList>
-          <TabsContent value="account">
-            <Card>
-              <CardHeader>
-                <CardTitle>Account</CardTitle>
-                <CardDescription>
-                  Make changes to your account here. Click save when you're
-                  done.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <div className="space-y-1">
-                  <label htmlFor="name">Name</label>
-                  <input id="name" defaultValue="Pedro Duarte" />
-                </div>
-                <div className="space-y-1">
-                  <label htmlFor="username">Username</label>
-                  <input id="username" defaultValue="@peduarte" />
-                </div>
-              </CardContent>
-              <CardFooter>
-                <button>Save changes</button>
-              </CardFooter>
-            </Card>
-          </TabsContent>
-          <TabsContent value="password">
-            <Card>
-              <CardHeader>
-                <CardTitle>Password</CardTitle>
-                <CardDescription>
-                  Change your password here. After saving, you'll be logged out.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <div className="space-y-1">
-                  <label htmlFor="current">Current password</label>
-                  <input id="current" type="password" />
-                </div>
-                <div className="space-y-1">
-                  <label htmlFor="new">New password</label>
-                  <input id="new" type="password" />
-                </div>
-              </CardContent>
-              <CardFooter>
-                <button>Save password</button>
-              </CardFooter>
-            </Card>
-          </TabsContent>
-        </Tabs> */}
-      </div>
+      </motion.div>
     </section>
   );
 };

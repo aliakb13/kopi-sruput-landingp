@@ -8,12 +8,17 @@ import {
 } from "./ui/card";
 
 import { Data } from "@/types/types";
-
 import { Flame } from "lucide-react";
+import { motion } from "motion/react";
 
 const CardMenu = ({ menu }: { menu: Data }) => {
   return (
-    <div className="p-1">
+    <motion.div
+      whileTap={{ scale: 0.95 }}
+      whileHover={{ rotate: 2, scale: 1.03 }}
+      transition={{ type: "spring", stiffness: 300 }}
+      className="p-1"
+    >
       <Card className="rounded-xl">
         <CardHeader>
           <CardTitle className="flex justify-between">
@@ -26,11 +31,11 @@ const CardMenu = ({ menu }: { menu: Data }) => {
           </CardDescription>
         </CardHeader>
 
-        <CardContent className="flex flex-col aspect-square p-6 gap-5 min-h-[350px]">
+        <CardContent className="flex flex-col aspect-square p-6 gap-5 md:min-h-[300px] lg:min-h-[350px]">
           <img
             src={menu.image}
             alt={menu.name}
-            className="w-full aspect-[4/3] object-cover rounded-xl"
+            className="w-full max-h-[250px] md:aspect-[4/3] object-cover rounded-xl"
           />
           <span className="font-semibold">{menu.description}</span>
         </CardContent>
@@ -38,7 +43,7 @@ const CardMenu = ({ menu }: { menu: Data }) => {
           <p className="text-blue-500">RP{menu.price}</p>
         </CardFooter>
       </Card>
-    </div>
+    </motion.div>
   );
 };
 
