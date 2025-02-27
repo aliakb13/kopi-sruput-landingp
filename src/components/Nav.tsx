@@ -1,15 +1,16 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 
 const NavLinks = () => {
   return (
     <>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Product</a>
-      <a href="#">Gallery</a>
-      <a href="#">Contact</a>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/product">Product</Link>
+      <Link to="/gallery">Gallery</Link>
+      <Link to="/contact">Contact</Link>
     </>
   );
 };

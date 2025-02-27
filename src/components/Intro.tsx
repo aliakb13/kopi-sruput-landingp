@@ -11,7 +11,7 @@ const Intro = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.3 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="flex-1 text-left max-w-2xl md:pl-32"
+          className="flex-1 text-left max-w-2xl md:pl-32 mt-6"
         >
           <h2 className="text-2xl sm:text-3xl md:text-lg font-bold text-white tracking-widest">
             ABOUT US
@@ -77,7 +77,7 @@ const Intro = () => {
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5, delay: 0.5, ease: "easeIn" }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="flex-1 text-left max-w-2xl md:pr-32"
         >
           <h2 className="text-2xl sm:text-3xl md:text-lg font-bold text-white tracking-widest">
