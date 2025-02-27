@@ -19,7 +19,7 @@ const CardMenu = ({ menu }: { menu: Data }) => {
       transition={{ type: "spring", stiffness: 300 }}
       className="p-1"
     >
-      <Card className="rounded-xl">
+      <Card className="rounded-xl border-yellow-500 shadow-xl shadow-white/50">
         <CardHeader>
           <CardTitle className="flex justify-between">
             <p className="text-yellow-500 font-extrabold">{menu.name}</p>

@@ -1,4 +1,4 @@
-import { useData } from "@/App";
+import { useData } from "./Home";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "motion/react";
 
