@@ -22,6 +22,11 @@ const DetailDialog = ({ data }: { data: Data }) => {
         </div>
       </DialogTrigger>
       <DialogContent className="max-w-[345px] md:max-w-[500px] backdrop-blur-sm border-yellow-500 border-2 ">
+        <DialogHeader>
+          <DialogTitle className="text-2xl text-yellow-500 font-extrabold">
+            Menu: {data.no}
+          </DialogTitle>
+        </DialogHeader>
         <div className="flex flex-col gap-3 items-center">
           <img
             className="w-full max-h-[250px] object-cover rounded-xl"

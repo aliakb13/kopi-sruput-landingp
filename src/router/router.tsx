@@ -4,6 +4,7 @@ import Intro from "@/components/Intro";
 import MainLayout from "./MainLayout";
 import Home from "@/components/Home";
 import Product from "@/components/Product";
+import Gallery from "@/components/Gallery";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "gallery",
-        element: "nanti",
+        element: <Gallery />,
       },
       {
         path: "contact",
