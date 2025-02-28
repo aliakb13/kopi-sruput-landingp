@@ -14,11 +14,9 @@ const Home = () => {
 
   return (
     <dataContext.Provider value={data}>
-      {/* <Header /> */}
       <HeroSection />
       <Intro />
       <BestSeller />
-      {/* <Footer /> */}
     </dataContext.Provider>
   );
 };

@@ -31,7 +31,7 @@ const DetailDialog = ({ data }: { data: Data }) => {
           <img
             className="w-full max-h-[250px] object-cover rounded-xl"
             src={data.image}
-            alt="something"
+            alt={data.name}
           />
         </div>
         <DialogHeader className="mt-5">

@@ -5,6 +5,7 @@ import MainLayout from "./MainLayout";
 import Home from "@/components/Home";
 import Product from "@/components/Product";
 import Gallery from "@/components/Gallery";
+import Contact from "@/components/Contact";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "contact",
-        element: "nanti",
+        element: <Contact />,
       },
     ],
   },
