@@ -6,10 +6,18 @@ const Footer = () => {
     >
       <div className="absolute inset-0 bg-yellow-500/60"></div>
       <nav className="relative flex justify-center gap-6">
-        <a className="link link-hover">About Us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Menu</a>
-        <a className="link link-hover">Gallery</a>
+        <a href="/about" className="link link-hover">
+          About Us
+        </a>
+        <a href="/contact" className="link link-hover">
+          Contact
+        </a>
+        <a href="/product" className="link link-hover">
+          Menu
+        </a>
+        <a href="/gallery" className="link link-hover">
+          Gallery
+        </a>
       </nav>
       <div className="relative flex justify-center gap-6 mt-6">
         <a href="https://x.com" target="_blank" rel="noopener noreferrer">

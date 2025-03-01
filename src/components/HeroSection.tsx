@@ -43,7 +43,7 @@ const HeroSection = () => {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
-          href="#produk"
+          href="/product"
           className="mt-6 inline-block py-3 px-10 bg-yellow-500 text-black text-base sm:text-lg font-semibold rounded-lg shadow-lg hover:bg-yellow-400 transition duration-300"
         >
           Lihat Produk
