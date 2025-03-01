@@ -1,9 +1,22 @@
 import { MapPin, Clock } from "lucide-react";
+import { motion } from "motion/react";
 
 const Contact = () => {
   return (
     <div className="p-6 md:p-12 mt-10 md:mt-10 flex flex-col items-center gap-5 md:flex-row md:justify-around md:items-start mb-5">
-      <div className="w-full h-[325px] md:h-[400px] md:w-1/2">
+      <motion.div
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: 1.3,
+          delay: 0.5,
+          ease: "easeIn",
+          type: "spring",
+          stiffness: 200,
+        }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="w-full h-[325px] md:h-[400px] md:w-1/2"
+      >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4796315685476!2d108.32739389999999!3d-6.331850900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb988f20b4adb%3A0x96fde05dffbe7af9!2sKedai%20Kopi%20Seruput%20Indramayu!5e0!3m2!1sid!2sid!4v1740756993237!5m2!1sid!2sid"
           width="100%"
@@ -13,8 +26,20 @@ const Contact = () => {
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-      </div>
-      <div className="flex flex-col md:justify-center mt-8 gap-8">
+      </motion.div>
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: 1.5,
+          delay: 0.8,
+          ease: "easeIn",
+          type: "spring",
+          stiffness: 200,
+        }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex flex-col md:justify-center mt-8 gap-8"
+      >
         <div>
           <h2 className="text-2xl font-bold text-yellow-500">
             Visit Us or Reach Out, We’re Here for You!
@@ -55,7 +80,7 @@ const Contact = () => {
             087894517901 (klik logo!)
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

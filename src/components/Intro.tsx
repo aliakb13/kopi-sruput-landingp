@@ -59,8 +59,6 @@ const Intro = () => {
             duration: 1.5,
             delay: 0.5,
             ease: "easeIn",
-            type: "spring",
-            stiffness: 200,
           }}
           viewport={{ once: true, amount: 0.3 }}
           className="flex-1 max-w-2xl"
