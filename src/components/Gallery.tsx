@@ -24,17 +24,35 @@ const Gallery = () => {
           <span className="text-yellow-500">SERUPUT.</span>
         </p>
       </motion.div>
-      <div className="mt-5 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: { staggerChildren: 0.2, delayChildren: 1 }, // Efek muncul satu per satu
+          },
+        }}
+        className="mt-5 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+      >
         {data.map((menu) => (
-          <div key={menu.no} className="overflow-hidden rounded-lg shadow-m">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, x: 100 }, // Efek awal
+              visible: { opacity: 1, x: 0 }, // Efek saat muncul
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            key={menu.no}
+            className="overflow-hidden rounded-lg shadow-m"
+          >
             <img
               className="w-full object-cover rounded-xl"
               src={menu.image}
               alt={menu.name}
             />
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
