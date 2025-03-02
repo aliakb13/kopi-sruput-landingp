@@ -44,7 +44,7 @@ const BestSeller = () => {
       <motion.div
         initial={{ scale: 0.7, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, delay: 0.4, ease: "easeIn" }}
+        transition={{ duration: 1.2, delay: 0.3, ease: "easeIn" }}
         viewport={{ once: true, amount: 0.3 }}
         className="w-[350px] md:w-full flex justify-center"
       >

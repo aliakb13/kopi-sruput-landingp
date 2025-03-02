@@ -56,7 +56,7 @@ export function Product() {
         variants={{
           hidden: {},
           visible: {
-            transition: { staggerChildren: 0.3, delayChildren: 1.5 }, // Efek muncul satu per satu
+            transition: { staggerChildren: 0.2, delayChildren: 1.5 }, // Efek muncul satu per satu
           },
         }}
         className="mt-5 grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5"
@@ -68,7 +68,7 @@ export function Product() {
               hidden: { opacity: 0, scale: 0.7 }, // Efek awal
               visible: { opacity: 1, scale: 1 }, // Efek saat muncul
             }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="flex justify-center"
           >
             <DetailDialog data={menu} />

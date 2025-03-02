@@ -4,8 +4,9 @@ import Intro from "@/components/Intro";
 import MainLayout from "./MainLayout";
 import Home from "@/components/Home";
 import Product from "@/components/Product";
-import Gallery from "@/components/Gallery";
-import Contact from "@/components/Contact";
+// import Gallery from "@/components/Gallery";
+// import Contact from "@/components/Contact";
+import GalleryContact from "@/components/GalleryContact";
 
 const router = createBrowserRouter([
   {
@@ -26,11 +27,11 @@ const router = createBrowserRouter([
       },
       {
         path: "gallery",
-        element: <Gallery />,
+        element: <GalleryContact />,
       },
       {
         path: "contact",
-        element: <Contact />,
+        element: <GalleryContact />,
       },
     ],
   },

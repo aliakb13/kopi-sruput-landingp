@@ -1,16 +1,30 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 
 const NavLinks = () => {
+  const { pathname } = useLocation();
+  const at = "text-yellow-500 underline font-bold";
+  const hover = "hover:text-yellow-500 hover:underline transition duration-300";
+
   return (
     <>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/product">Product</Link>
-      <Link to="/gallery">Gallery</Link>
-      <Link to="/contact">Contact</Link>
+      <Link to="/" className={pathname === "/" ? at : hover}>
+        Home
+      </Link>
+      <Link to="/about" className={pathname === "/about" ? at : hover}>
+        About
+      </Link>
+      <Link to="/product" className={pathname === "/product" ? at : hover}>
+        Product
+      </Link>
+      <Link to="/gallery" className={pathname === "/gallery" ? at : hover}>
+        Gallery
+      </Link>
+      <Link to="/contact" className={pathname === "/contact" ? at : hover}>
+        Contact
+      </Link>
     </>
   );
 };

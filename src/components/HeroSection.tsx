@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -43,10 +44,10 @@ const HeroSection = () => {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
-          href="/product"
-          className="mt-6 inline-block py-3 px-10 bg-yellow-500 text-black text-base sm:text-lg font-semibold rounded-lg shadow-lg hover:bg-yellow-400 transition duration-300"
+          // href="/product"
+          className="mt-6 inline-block py-3 px-10 bg-yellow-500 text-black text-base sm:text-lg font-semibold rounded-lg shadow-lg hover:bg-yellow-400 transition duration-300 cursor-pointer"
         >
-          Lihat Produk
+          <Link to="/product">Lihat Produk</Link>
         </motion.a>
       </div>
     </motion.section>

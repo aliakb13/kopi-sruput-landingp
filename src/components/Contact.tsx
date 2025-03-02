@@ -3,7 +3,10 @@ import { motion } from "motion/react";
 
 const Contact = () => {
   return (
-    <div className="p-6 md:p-12 mt-10 md:mt-10 flex flex-col items-center gap-5 md:flex-row md:justify-around md:items-start mb-5">
+    <section
+      id="contact"
+      className="p-6 md:p-12 mt-10 md:mt-10 flex flex-col items-center gap-5 md:flex-row md:justify-around md:items-start mb-5"
+    >
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -79,7 +82,7 @@ const Contact = () => {
           </p>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
