@@ -69,7 +69,7 @@ export function Product() {
               visible: { opacity: 1, scale: 1 }, // Efek saat muncul
             }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="flex justify-center"
+            className="flex flex-row justify-center"
           >
             <DetailDialog data={menu} />
           </motion.div>
